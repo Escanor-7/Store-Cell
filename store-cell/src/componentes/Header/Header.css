@@ -1,0 +1,102 @@
+*{
+    font-size: 'Lato', sans-serif;
+}
+
+.bg-primary-color {
+    background-color: rgb(255, 255, 255);
+}
+
+.bg-secundary-color {
+    background-color: #ece8ea;
+
+}
+
+.bg-dark-color {
+    background-color: #050505
+}
+
+.primary-color{
+    color: #050505;
+}
+.segundario-color{
+    color: #7a7a7a
+}
+
+/* nav bar */
+
+#navbar{
+    border-bottom: 1px solid #7a7a7a;
+}
+
+#navbar a:hover {
+    color: #7a7a7a
+}
+
+#navbar a.active {
+    border-bottom: 1px solid #050505;
+}
+.navbar-brand {
+    margin-left: auto;
+}
+
+.navbar-brand img {
+    width: 120px;
+    font-size: 2.0em;
+    margin-left: 0.25rem;
+
+    
+}
+
+.navbar-brand span {
+    font-size: 2.0em;
+    margin-top: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 0.50ex;
+}
+#navbar-items .navbar-nav{
+    
+    justify-content: row;
+    width: 100%;
+}
+
+#navbar-items .nav-items{
+    margin: 0 1em;
+}
+.nav-icone{
+    font-size: 27px;
+    
+    justify-content: center;
+    
+}
+.nav-login{
+    font-size: 16.5px;
+    border-bottom: 1px solid #050505;
+    
+}
+.btn-secondary-whith{
+    color:#050505;
+    background-color: #fff;
+    
+}
+.dropdown-menu{
+    background: #050505;
+}
+.bi-bag{
+    font-size: 30px;
+    background: #fff;
+    color: black;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.btn-icone{
+    padding: 1px;
+    color: black;
+    font-size: 20px;
+
+     
+}
+.btn-custom{
+    padding: 1px 1px;
+    border: 50px;
+}

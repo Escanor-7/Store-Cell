@@ -5,8 +5,9 @@ const Home = () => {
 
     return (
         <>
-            <Header />
-            <ButtonHome />
+            <Header/>
+           
+            
         </>
     )
 }
