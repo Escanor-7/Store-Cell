@@ -50,7 +50,7 @@ const Header = () => {
                         
                         <div class="input-group">
                             <input type="search" class="form-control rounded-1 me-2" placeholder="Search" aria-label="Search"
-                             aria-describedby="search-addon" />
+                             aria-describedby="search-addon"  />
                              <p>
                             <a href="#" class="btn btn-link btn-custom" ></a>
                             <span class="glyphicon glyphicon-bi bi-search me-4 btn-icone">
