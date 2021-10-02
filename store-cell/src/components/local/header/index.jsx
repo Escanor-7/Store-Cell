@@ -1,15 +1,15 @@
 import React from "react";
-import StoreCell from '../../img/store-cell.png'; 
-import  '../Header/Header.css';
+import StoreCell from '../../../img/store-cell.png'; 
+import  './Header.css';
 
 
 const Header = () => {
 
     return (
 
-        <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+        <nav class="navbar navbar-expand-lg stretch-top bg-primary-color" id="navbar">
             <div class="container-fluid">
-               <a href="#" class="navbar-brand primary-color">
+               <a href="/Home" class="navbar-brand primary-color">
                 <img src={StoreCell} alt='Storecell'/>
                 <span>StoreCell</span>
                </a>
