@@ -1,5 +1,5 @@
 import React from "react";
-import StoreCell from '../../../img/Store-cell.png';
+import StoreCell from '../../../img/store-cell.png';
 import  './Header.css';
 
 
