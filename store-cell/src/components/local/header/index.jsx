@@ -1,65 +1,53 @@
 import React from "react";
-import StoreCell from '../../../img/Store-cell.png';
-import  './Header.css';
+import * as S from './Header.styles.js';
 
 
 const Header = () => {
 
     return (
 
-        <nav className="navbar navbar-expand-lg stretch-top bg-primary-color" id="navbar">
-            <div className="container-fluid">
-               <a href="/Home" className="navbar-brand primary-color">
-                 <img src={StoreCell} alt='Storecell'/>
-                 <span>StoreCell</span>
-               </a>
+        <S.Container>
+            <div>
+                <S.CardImg src="./img/Store-cell.png" alt="logoStoreCell" />
+            </div>
+            <div>
+                <S.StoreCell>
+                    StoreCell
+                </S.StoreCell>
+            </div>
+            <nav>
+                <S.ul>
+                    <S.li>
+                        <S.a href="#">Home</S.a>
+                    </S.li>
+                    <S.li>
+                        <S.a href="#">Smartphones</S.a>
+                    </S.li>
+                    <S.li>
+                        <S.a href="#">Meus Pedidos</S.a>
+                    </S.li>
+                </S.ul>
+            </nav>
 
-                <button
-                 className="navbar-toggler"
-                 type="button"
-                 data-bs-toggle="collapse"
-                 data-bs-target="#navbar-items"
-                 aria-controls="navbar-items"
-                 aria-expanded="false"
-                 aria-label="Toggle navgation"
-                 >
-                    <i className="bi bi-list"></i>
+            <form action="#">
+                <S.searchInput type="text" className="search-input" placeholder="Search" />
 
-                </button>
-                    <div classname="collapse navbar-collapse" id="navbar-items">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-items">
-                                <a href="#" className="nav-link active primary-color" aria-current="page">Inicio</a>
-                            </li>
-                            <li className="nav-item">
-                                <a href="#" className="nav-link primary-color" aria-current="page">Smartphones</a>
-                            </li>
-                            <li className="nav-item">
-                                <a href="#" className="nav-link primary-color" aria-current="page">Meus Pedidos</a>
-                            </li>
-                        </ul>
-                    </div>
+                <S.searchBtn className="search-btn">
+                    <i className="bi bi-search"></i>
+                </S.searchBtn>
+            </form>
 
-                    <div className="nav-search input-group navbar mb-5">
-                       <input type="search" className="form-control" placeholder="Search..." aria-label="Search"
-                                aria-describedby="search-addon"/>
-                                <span className="input-group-text navbar" id="search-addon">
-                                  <i className="bi bi-search"></i>
-                                </span>
-                             
-                    </div>
-                    
-                   
-                    <i className="bi bi-person-circle nav-icone mb-4"></i>
-                    <a href="#" className="nav-link primary-color nav-login mb-4" aria-current="page">Conecte-se</a>
-                    <a href="#" className="mb-4">
-                    <i className="bi bi-bag"></i>
-                    </a>
-                   
-                
-           </div>
-        </nav>
+            <nav>
+                <S.login className="login">
+                    <S.li>
+                        <S.biPerson className="bi bi-person-fill"></S.biPerson>
+                        <S.a href="#">Login</S.a>
+                        <S.biBag className="bi bi-bag"></S.biBag>
+                    </S.li>
+                </S.login>
+            </nav>
 
+        </S.Container>
     )
 }
 
