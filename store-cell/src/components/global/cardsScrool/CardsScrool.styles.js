@@ -5,65 +5,36 @@ export const Container = styled.div`
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 
-    &.slick-prev:before, .slick-next:before{
-        color: black;
-        
-    }
-    &.slick-prev{
-      margin-left: -100px;
-    }
-    &.slick-arrow{
-        font-size: 100px;
-        width: 100px;
-        &.slick-next:before{
-            font-size: 100px;
-        width: 100px;
-        color: red;  
-        }
-        &.slick-next{
-            font-size: 100px;
-        width: 100px;
-        color: red;  
-        &.slick-next:before{
-            font-size: 100px;
-        width: 100px;
-        color: red;  
-        }
+    /* Foi assim que consegui acessar as setas do slider */
+    div {
+        button {
+            &.slick-prev {
+                left: 10px !important;
+                z-index: 1;
+            }
+            &.slick-next {
+                right: 10px !important;
+                z-index: 1;
+            }
         }
     }
-
-    &.button.slick-arrow.slick-next::before{
-        font-size: 100px;
-        width: 100px;
-        color: red;
-    }
-
-
 `;
 export const Card = styled.div`
-    width: 100px;
-    height: 320px;
+    display: flex !important;
+    flex-direction: column;
+    width: 250px !important;
+    margin: 10px 0px 10px 45px;
     background-color: white;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    justify-content: center;
-    margin-left: 45px;
-
-    img{
-      padding: 0px;
-      padding-top: 20px;
-      margin-inline: 17%;
-    }
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 8px;
 `;
 export const Description = styled.div`
-    width: 100%;
-    text-align: center;
+    display: flex !important;
+    flex-direction: column;
     align-items: center;
-    color: black;
-    
+    justify-content: center;
+
     h5{
         font-size: 18px;
         margin-inline: 10px;

@@ -1,27 +1,20 @@
 import React from 'react';
-import * as S from './CardsScrool.styles.js';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import * as S from './CardsScrool.styles.js';
 
 const CardsScrool = () => {
-
-    const settings = {
-        dots: true,
+    var settings = {
+        dots: false,
+        className: 'slider',
         infinite: true,
-        speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 4
-
-    };
+        speed: 1000,
+    }
     return (
-
-
         <S.Container>
             <Slider {...settings}>
-              
-                
                     <S.Card>
                         <img src="./img/CardCell.img/Cell-Samsung/Samsung01.jpg" alt="" />
                         <S.Description>
@@ -73,14 +66,6 @@ const CardsScrool = () => {
                 
             </Slider>
         </S.Container>
-
-
-
-
-
-
-
-
     );
 }
 
