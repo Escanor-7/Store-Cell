@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const Carousel = () => {
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -18,7 +18,7 @@ const Carousel = () => {
     return (
 
 
-        <div>
+        <S.Container>
             <Slider {...settings}>
 
                 <div class="carousel-item active">
@@ -32,7 +32,7 @@ const Carousel = () => {
                 </div>
 
             </Slider>
-        </div>
+        </S.Container>
 
 
 

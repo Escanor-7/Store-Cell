@@ -3,16 +3,32 @@ import styled from "styled-components";
 export const Banner = styled.img`
     width:100%;
 `;
+export const Container = styled.div`
+    background-color: #2c2b2b;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 
-/*
-.bi-chevron-compact-left,
-.bi-chevron-compact-right {
-    color:rgb(0, 0, 0);
-    font-size: 3em;
-}
-.carousel-indicators{
-    bottom: 14em;
-}
-.carousel-indicators [data-bs-target]{
-  background-color: rgb(0, 0, 0);
-}*/
+    /* Foi assim que consegui acessar as setas do slider */
+    div {
+        button {
+            &.slick-prev {
+                left: 10px !important;
+                z-index: 1;
+                
+                :before{
+                    color: black;
+                    font-size: 25px;
+                }
+            }
+            &.slick-next {
+                right: 10px !important;
+                z-index: 1;
+
+                :before{
+                    color: black;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+`;

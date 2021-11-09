@@ -23,6 +23,7 @@ export const Card = styled.div`
     display: flex !important;
     flex-direction: column;
     width: 250px !important;
+    height: 350px;
     margin: 10px 0px 10px 45px;
     background-color: white;
     justify-content: center !important;
@@ -34,6 +35,7 @@ export const Description = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
     h5{
         font-size: 18px;
