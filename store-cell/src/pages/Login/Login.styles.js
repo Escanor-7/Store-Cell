@@ -32,7 +32,7 @@ export const ButtonContainer = styled.div`
 
     h4{
         margin-top: 50px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Lucida sans;
         font-size: 17px;
         bottom:60px;
         color: white;
@@ -73,7 +73,7 @@ export const ButtonCadastrar = styled.div`
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:Lucida sans;
         width: 25%;
         height: 60px;
         background-color: green;

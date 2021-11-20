@@ -15,45 +15,56 @@ const Register = ({ setClosePopup }) => {
                 <h1>Cadastro</h1>
 
                 <S.Cadastro>
-                    <S.InputNome>
-                        <i class="bi bi-person"></i>
-                        <input
-                            type="text"
-                            placeholder="Nome..." />
-                    </S.InputNome>
+                    <S.InputContainer>
+                        <div>
+                            <i class="bi bi-person"></i>
+                            <input
+                                type="text"
+                                placeholder="Nome..." />
+                        </div>
+                    </S.InputContainer>
+                    <S.InputContainer>
+                        <div>
+                            <i class="bi bi-card-text"></i>
+                            <input
+                                type="text"
+                                placeholder="Cpf..." />
+                        </div>
+                    </S.InputContainer>
 
-                    <S.InputCpf>
-                        <i class="bi bi-card-text"></i>
-                        <input
-                            type="text"
-                            placeholder="Cpf..." />
-                    </S.InputCpf>
+                    <S.InputContainer>
+                        <div>
+                            <i class="bi bi-envelope"></i>
+                            <input
+                                type="text"
+                                placeholder="Email..." />
+                        </div>
+                    </S.InputContainer>
 
-                    <S.InputEmail>
-                        <i class="bi bi-envelope"></i>
-                        <input
-                            type="text"
-                            placeholder="Email..." />
-                    </S.InputEmail>
+                    <S.InputContainer>
+                        <div>
+                            <i class="bi bi-phone"></i>
+                            <input
+                                type="text"
+                                placeholder="Celular..." />
+                        </div>
+                    </S.InputContainer>
 
-                    <S.InputCell>
-                        <i class="bi bi-phone"></i>
-                        <input
-                            type="text"
-                            placeholder="Celular..." />
-                    </S.InputCell>
-
-                    <S.InputPassword>
-                        <i class="bi bi-shield-lock"></i>
-                        <input
-                            type="text"
-                            placeholder="Senha..." />
-                    </S.InputPassword>
+                    <S.InputContainer>
+                        <div>
+                            <i class="bi bi-shield-lock"></i>
+                            <input
+                                type="text"
+                                placeholder="Senha..." />
+                        </div>
+                    </S.InputContainer>
                 </S.Cadastro>
-
-                <S.ButtonCadastrar type="submit">
-                    Cadastrar
-                </S.ButtonCadastrar>
+                
+                
+                    <S.ButtonCadastrar type="submit">
+                        Cadastrar
+                    </S.ButtonCadastrar>
+                
             </S.Popup>
         </S.Container>
     )
