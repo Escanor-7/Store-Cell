@@ -12,9 +12,9 @@ function App() {
         <>
             
             <Header/>
-            {/*<Carousel/>
+            {/* <Carousel/>
             <MiniBanners/>
-            <CardsScrool/>*/}
+            <CardsScrool/> */}
             <Login/>
 
             {/*...*/}
