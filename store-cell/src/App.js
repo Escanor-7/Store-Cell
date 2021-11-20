@@ -1,5 +1,6 @@
 import React from "react";
 import Header from './components/local/header/index';
+import Footer from './components/local/footer/index'
 // Pode importar o footer aqui
 import Carousel from '../src/components/local/carousel';
 import MiniBanners from '../src/components/local/miniBanners';
@@ -15,7 +16,7 @@ function App() {
             <MiniBanners/>
             <CardsScrool/>
 
-            {/*...*/}
+            <Footer/>
         </>
     )
 }
