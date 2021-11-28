@@ -6,6 +6,7 @@ import MiniBanners from '../src/components/local/miniBanners';
 import CardsScrool from './components/global/cardsScrool';
 import Login from './pages/Login/index';
 import Bag from './pages/Bag/index';
+import Checkout from "./pages/Checkout";
 // Este componente App é onde vamos importar as páginas e criar nossas rotas
 
 function App() {
@@ -16,9 +17,9 @@ function App() {
             <Carousel/>
             <MiniBanners/>
             <CardsScrool/>
-            <Login/>*/}
-
-            <Bag/>
+            <Login/>
+            <Bag/>*/}
+            <Checkout/>
 
             {/*...*/}
         </>
