@@ -7,65 +7,47 @@ const Bag = () => {
 
             <h1>Minha Sacola</h1>
 
-            <S.ContainerItens>
+            <S.ContainerDescricoes>
+                <span>
+                    Quantidade
+                </span>
+                <span>
+                    Preço
+                </span>
+            </S.ContainerDescricoes>
 
-                <S.ContainerOpcoes>
+            <S.ContainerProductor>
 
-                    <S.OpcoesQuantidade>
-                        <p>Quantidade</p>
-                    </S.OpcoesQuantidade>
+                <img src="./img/CardCell.img/Cell-Iphone/Iphone01.jpg" alt="Celular Iphone" />
 
-                    <S.OpcoesPreco>
-                        <p>Preço</p>
-                    </S.OpcoesPreco>
+                <div>
+                    <span>
+                        Apple iPhone iPhone 11 iOS Tela de 6,1 polegadas 12 MP
+                    </span>
+                </div>
 
-                </S.ContainerOpcoes>
+                <S.ContainerOption>
+                    <select>
+                        <option Selection value="#">01</option>
+                        <option value="#">02</option>
+                        <option value="#">03</option>
+                        <option value="#">04</option>
+                        <option value="#">05</option>
+                    </select>
+                </S.ContainerOption>
 
-                <S.ContainerProductor>
-                    <img src="./img/CardCell.img/Cell-Iphone/Iphone01.jpg" alt="Celular Iphone" />
-                    <div>
-                        <p>iPhone 11 Apple 128GB Preto 6,1” 12MP iOS</p>
-                    </div>
+                <S.ContainerSubDescricoes>
+                    <span>
+                        Frete:
+                        <a href="Link">Grátis</a>
+                    </span>
+                    <span>
+                        SubTotal: R$ 4.783,90
+                    </span>
+                </S.ContainerSubDescricoes>
 
-                    <S.ContainerDropdown>
+            </S.ContainerProductor>
 
-                        <select>
-                            <option selected value="#">1</option>
-                            <option value="#">2</option>
-                            <option value="#">3</option>
-                            <option value="#">4</option>
-                            <option value="#">5</option>
-                        </select>
-                        
-                    </S.ContainerDropdown>
-
-                    <div>
-                        <a href="link">Remover</a>
-                    </div>
-
-                    <S.ContainerValor>
-                        <p>
-                            R$ 4.184,07 à vista
-                        </p>
-                    </S.ContainerValor>
-
-                </S.ContainerProductor>
-
-                <S.ContainerContinuar>
-                    <div>
-                        <p>
-                            Total: R$ 4.184,07
-                        </p>
-                    </div>
-
-                    <div>
-                        <button>
-                            Continuar
-                        </button>
-                    </div>
-                </S.ContainerContinuar>
-
-            </S.ContainerItens>
         </S.Container>
     )
 }

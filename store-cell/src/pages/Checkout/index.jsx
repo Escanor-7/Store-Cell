@@ -15,6 +15,8 @@ const Checkout = () => {
                     <span>
                         Entrega 01 de 01 por Loja Oficial Apple - Receba em até 5 dias úteis
                         01 iPhone 11 64GB - Preto - Apple
+                    </span>
+                    <span>
                         <a href="link">Editar Sacola</a>
                     </span>
 
@@ -31,6 +33,8 @@ const Checkout = () => {
 
                     <span>
                         Endereço para a entrega 01: Jorge Coelho, 700 - Sao Paulo/SP
+                    </span>
+                    <span>
                         <a href="link">Alterar Endereço</a>
                     </span>
 

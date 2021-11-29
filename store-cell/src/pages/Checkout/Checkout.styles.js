@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    height: 150vh;
+    height: 200vh;
     background-color: #2b2b2c;
     display: flex;
     justify-content: flex-start;
@@ -26,7 +26,7 @@ export const ContainerDescriçoes = styled.div`
         color: white;
         width: 100%;
         background-color: #202024;
-        text-align: center;
+        text-align: start;
         font-size: 22px;
     }
     button{
@@ -66,7 +66,7 @@ export const RevisaoDoPedido = styled.div`
     }
     a{
         color: goldenrod;
-        margin-left: 10px;
+        margin-left: 0px;
         font-style: italic;
     }
 `;
@@ -99,7 +99,7 @@ export const ContainerPagamento = styled.div`
         color: white;
         width: 100%;
         background-color: #202024;
-        text-align: center;
+        text-align: start;
         font-size: 22px;
     }
 
