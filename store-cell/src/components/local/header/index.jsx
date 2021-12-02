@@ -1,52 +1,36 @@
 import React from "react";
 import * as S from './Header.styles.js';
+import SideMenu from "../sideMenu/index.jsx";
 
 
 const Header = () => {
 
     return (
-
         <S.Container>
-            <div>
+            <S.MobileOptionsList>
+                <SideMenu />
+            </S.MobileOptionsList>
+            <S.LogoContainer>
                 <S.CardImg src="./img/Store-cell.png" alt="logoStoreCell" />
-            </div>
-            <div>
-                <S.StoreCell>
-                    StoreCell
-                </S.StoreCell>
-            </div>
-            <nav>
-                <S.ul>
-                    <S.li>
-                        <S.a href="#">Home</S.a>
-                    </S.li>
-                    <S.li>
-                        <S.a href="#">Smartphones</S.a>
-                    </S.li>
-                    <S.li>
-                        <S.a href="#">Meus Pedidos</S.a>
-                    </S.li>
-                </S.ul>
-            </nav>
+                <p>StoreCell</p>
+            </S.LogoContainer>
 
-            <form action="#">
-                <S.searchInput type="text" className="search-input" placeholder="Search" />
+            <S.Item href="#" >Smartphones</S.Item>
+            <S.Item href="#" >Meus Pedidos</S.Item>
+
+            <S.SearchBar action="#">
+                <S.searchInput type="text" className="search-input" placeholder="O que deseja encontrar ?" />
 
                 <S.searchBtn className="search-btn">
                     <i className="bi bi-search"></i>
                 </S.searchBtn>
-            </form>
+            </S.SearchBar>
 
-            <nav>
-                <S.login className="login">
-                    <S.li>
-                        <S.biPerson className="bi bi-person-fill"></S.biPerson>
-                        <S.a href="#">Login</S.a>
-                        <S.biBag className="bi bi-bag"></S.biBag>
-                    </S.li>
-                </S.login>
-            </nav>
-
+            <S.login className="login">
+                <S.BiPerson className="bi bi-person-fill" />
+                <a>Login</a>
+            </S.login>
+            <S.BiBag className="bi bi-bag" />
         </S.Container>
     )
 }
