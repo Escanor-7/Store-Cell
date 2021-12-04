@@ -1,3 +1,4 @@
+// Substitute fonts
 const subFonts = 'Arial, Helvetica, sans-serif';
 
 const theme = {
@@ -8,9 +9,9 @@ const theme = {
 
   colors: {
     whiteGlobal: '#ffffff', // background-color default
-    darkGray: '#656565', // color default for texts
+    darkGray: '#656565', // color default for texts of description 16px
     lightBrown: '#8d8178',
-    darkBlack: '#2c2b2b',
+    darkBlack: '#2c2b2b', // color default for texts 24px
     lightGray: '#b2b2b2',
     lightGraySecundary: '#cdcdcd',
     darkGreen: '#31C225',

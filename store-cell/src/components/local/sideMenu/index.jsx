@@ -4,7 +4,6 @@ import * as S from './SideMenu.styles.js';
 const SideMenu = () => {
 
   return (
-    // <nav role="navigation">
       <S.MenuToggle>
         <input type="checkbox" />
         <span></span>
@@ -18,7 +17,6 @@ const SideMenu = () => {
           <a href="https://erikterwan.com/" target="_blank" rel="noreferrer"><li>Show me more</li></a>
         </S.Menu>
       </S.MenuToggle>
-    // </nav>
   )
 }
 

@@ -15,14 +15,14 @@ export const Container = styled.div`
                 z-index: 1;
                 left: -40px !important;
                 &.slick-prev::before {
-                    color: ${(props) => props.theme.colors.lightGray}
+                    color: ${(props) => props.theme.colors.darkBlack}
                 }
             }
             &.slick-next {
                 z-index: 1;
                 right: -40px !important;
                 &.slick-next::before {
-                    color: ${(props) => props.theme.colors.lightGray}
+                    color: ${(props) => props.theme.colors.darkBlack}
                 }
             }
         }
@@ -78,6 +78,8 @@ export const Description = styled.div`
         margin-top: 5px;
         margin-bottom: 0px;
         color: ${(props) => props.theme.colors.darkBlack};
+        text-overflow: ellipsis;
+        word-break: break-all;
     }
 
     p{
@@ -96,6 +98,7 @@ export const Description = styled.div`
         font-size: 20px;
         color: ${(props) => props.theme.colors.whiteGlobal};
         border-radius: 6px;
+        cursor: pointer;
         
         :hover{
             background-color: ${(props) => props.theme.colors.whiteGlobal};
