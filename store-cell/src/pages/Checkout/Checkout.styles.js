@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    height: 200vh;
+    height: 150vh;
     background-color: #2b2b2c;
     display: flex;
     justify-content: flex-start;
@@ -56,43 +56,51 @@ export const RevisaoDoPedido = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    margin-block: 10px;
+`;
+export const Descrition = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 100px;
     flex-direction: column;
 
     span{
         color: white;
-        margin-top: 10px;
         width: 500px;
+        text-align: start;
     }
     a{
         color: goldenrod;
-        margin-left: 0px;
         font-style: italic;
     }
 `;
-export const RevisaoTotal = styled.div`
+export const SubDescrition = styled.div`
     display: flex;
-    width: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
+    width: 50%;
+    height: 100px;
     flex-direction: column;
 
     span{
         color: white;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 900;
+        width: 500px;
+        text-align: start;
     }
+
     a{
         color: green;
         font-style: italic;
     }
+    
 `;
 export const ContainerPagamento = styled.div`
     display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
 
     h3{
@@ -102,13 +110,15 @@ export const ContainerPagamento = styled.div`
         text-align: start;
         font-size: 22px;
     }
+    
+`;
+export const ContainerCartaoDeCredito = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-    h2{
-        color: #202024;
-        background-color: white;
-        border-radius: 10px;
-        height: 30px;
-    }
     button{
         border-radius: 50%;
         width: 10px;
@@ -118,7 +128,7 @@ export const ContainerPagamento = styled.div`
 
 export const InputContainer = styled.div`
     display: flex;
-    width: 35%;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
     align-items: baseline;
