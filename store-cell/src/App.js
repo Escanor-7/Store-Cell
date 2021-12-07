@@ -11,9 +11,9 @@ function App() {
     return (
         <>
             <ThemeProvider theme={theme}  >
-                <Header />
-                <Home />
-                {/* <Login /> */}
+                {/* <Header />
+                <Home /> */}
+                <Login />
             </ThemeProvider>
         </>
     )

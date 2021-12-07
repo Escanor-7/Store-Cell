@@ -7,6 +7,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: ${(props) =>props.theme.fontFamilies.sansSerif};
 `;
 
 export const Login = styled.div`
@@ -14,13 +15,13 @@ export const Login = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: #2b2b2b;
+    background-color: ${(props) => props.theme.colors.whiteGlobal};
     text-align: center;
 
     h1{
-        font-family: Lucida sans;
         font-size: 50px;
-        color: white;
+        color: ${(props) => props.theme.colors.darkBlack};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
     }
 `;
 
@@ -32,10 +33,9 @@ export const ButtonContainer = styled.div`
 
     h4{
         margin-top: 50px;
-        font-family: Lucida sans;
         font-size: 17px;
         bottom:60px;
-        color: white;
+        color: ${(props) => props.theme.colors.darkBlack};
     }
 `;
 
@@ -44,28 +44,31 @@ export const ButtonEntrar = styled.div`
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        font-family: Lucida sans;
         width: 25%;
         height: 60px;
-        background-color: green;
-        color: white;
+        background-color: ${(props) => props.theme.colors.darkGreen};
+        color: ${(props) => props.theme.colors.whiteGlobal};
         font-weight: 700;
         border-radius: 5px;
         margin-top: 5px;
         border: none;
-        border: 1px solid #b0b0b0;
+        border: 1px solid ${(props) => props.theme.colors.darkBlack};
 
         outline-width: 0;
 
         :hover{
-            border: 1px solid white;
-            box-shadow: 0 0 7px -1px white;
+            border: 1px solid ${(props) => props.theme.colors.royalBlue};
+            box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.royalBlue};
             cursor: pointer;
         }
 
+        @media (max-width: 800px) {
+            width: 30%;
+            font-size: 29px;
+        }
         @media (max-width: 600px) {
             width: 50%;
-            font-size: 16px;
+            font-size: 27px;
         }
 `;
 export const ButtonCadastrar = styled.div`
@@ -73,25 +76,28 @@ export const ButtonCadastrar = styled.div`
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        font-family:Lucida sans;
         width: 25%;
         height: 60px;
-        background-color: green;
-        color: white;
-        font-weight: 700;
+        background-color: ${(props) => props.theme.colors.darkGreen};
+        color: ${(props) => props.theme.colors.whiteGlobal};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
         border-radius: 5px;
         border: none;
-        border: 1px solid #b0b0b0;
+        border: 1px solid ${(props) => props.theme.colors.darkBlack};
         
         :hover{
-            border: 1px solid white;
-            box-shadow: 0 0 7px -1px white;
+            border: 1px solid ${(props) => props.theme.colors.royalBlue};
+            box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.royalBlue};
             cursor: pointer;
         }
 
+        @media (max-width: 800px) {
+            width: 30%;
+            font-size: 29px;
+        }
         @media (max-width: 600px) {
             width: 50%;
-            font-size: 16px;
+            font-size: 27px;
         }
 `;
 
@@ -104,7 +110,7 @@ export const InputContainer = styled.div`
 
     label {
         font-size: 20px;
-        color: #eff3f5;
+        color: ${(props) => props.theme.colors.darkBlack};
         margin: 0px 0px 10px 22px;
     }
 
@@ -119,26 +125,26 @@ export const InputContainer = styled.div`
             left: 25px;
             font-size: 25px;
             margin-left: 10px;
-            color: #434242;
+            color: ${(props) => props.theme.colors.darkGray};
         }
 
         input{
-            color: #434242;
+            color: ${(props) => props.theme.colors.darkGray};
             margin-left: 10px;
             margin-right: 10px;
             width: 100%;
             margin-bottom: 10px;
             display: flex;
             align-items: center;
-            background-color: white;
+            background-color: ${(props) => props.theme.colors.whiteGlobal};
             border-radius: 5px;
             height: 50px;
-            border: 1px solid #b0b0b0;
+            border: 1px solid ${(props) => props.theme.colors.darkBlack};
             padding-left: 50px;
 
             :hover{
-                border: 1px solid #006272;
-                box-shadow: 0 0 7px -1px #006272;
+                border: 1px solid ${(props) => props.theme.colors.royalBlue};
+                box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.royalBlue};
             }
         }
     }
