@@ -1,7 +1,7 @@
 import React from 'react';
-import * as S from './Bag.styles.js'
+import * as S from './Carrinho.styles.js'
 
-const Bag = () => {
+const Carrinho = () => {
     return (
         <S.Container>
 
@@ -70,4 +70,4 @@ const Bag = () => {
     )
 }
 
-export default Bag;
+export default Carrinho;
