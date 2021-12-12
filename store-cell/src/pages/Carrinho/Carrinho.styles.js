@@ -24,7 +24,6 @@ export const ContainerItens = styled.div`
     height: 80vh;
     margin: 0px;
     padding: 0px;
-    
 `;
 export const ContainerOpcoes = styled.div`
     display: flex;

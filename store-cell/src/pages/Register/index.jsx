@@ -10,11 +10,14 @@ const Register = ({ setClosePopup }) => {
         <S.Container>
             <S.Popup>
 
-                <S.ButtonX type="button" onClick={() => handleClosePopup()}>X</S.ButtonX>
+                <S.ContainerButton>
+                    <S.ButtonX type="button" onClick={() => handleClosePopup()}>X</S.ButtonX>
+                </S.ContainerButton>
 
                 <h1>Cadastro</h1>
 
                 <S.Cadastro>
+
                     <S.InputContainer>
                         <div>
                             <i class="bi bi-person"></i>
@@ -58,12 +61,12 @@ const Register = ({ setClosePopup }) => {
                                 placeholder="Senha..." />
                         </div>
                     </S.InputContainer>
-                </S.Cadastro>
-                
-                
+
                     <S.ButtonCadastrar type="submit">
                         Cadastrar
                     </S.ButtonCadastrar>
+
+                </S.Cadastro>
                 
             </S.Popup>
         </S.Container>

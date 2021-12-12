@@ -3,13 +3,12 @@ const subFonts = 'Arial, Helvetica, sans-serif';
 
 const theme = {
 
-  weight:{
-  fontWeightBold: 700,
-  fontWeightSemiBold: 600,
-  fontWeightMedium: 500,
-  fontWeightRegular: 400,
+  weight: {
+    fontWeightBold: 700,
+    fontWeightSemiBold: 600,
+    fontWeightMedium: 500,
+    fontWeightRegular: 400,
   },
-  
 
   colors: {
     whiteGlobal: '#ffffff', // background-color default
@@ -18,7 +17,9 @@ const theme = {
     darkBlack: '#2c2b2b', // color default for texts 24px
     lightGray: '#b2b2b2',
     lightGraySecundary: '#cdcdcd',
-    darkGreen: '#006400',
+    darkGreen: '#006400', //color default of button
+    gray: '#808080', // default color for eyeshadows for input
+    royalBlue: '#4169E1', // color default for hover for boder, box shandow
   },
 
   fontFamilies: {
