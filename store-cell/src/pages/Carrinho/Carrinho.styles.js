@@ -4,7 +4,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: ${(props) => props.theme.colors.whiteGlobal};
     flex-direction: column;
@@ -15,131 +15,206 @@ export const Container = styled.div`
         font-weight: ${(props) => props.theme.weight.fontWeightBold};
     }
 `;
-export const ContainerItens = styled.div`
-    background-color: transparent;
+
+export const ContainerOptions = styled.div`
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: 95%;
-    height: 80vh;
-    margin: 0px;
-    padding: 0px;
-`;
-export const ContainerOpcoes = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    
-`;
-export const OpcoesQuantidade = styled.p`
     width: 90%;
-       p{
-        color: ${(props) => props.theme.colors.whiteGlobal};
-        width: 100%;
-        font-weight: ${(props) => props.theme.weight.fontWeightBold};
-        text-align: center;
-        font-size: 20px;
-        background-color: ${(props) => props.theme.colors.darkBlack};
-        padding-left: 190px;
-       }
-`;
-export const OpcoesPreco = styled.p`
-    width: 20%;
-        p{
-        color: ${(props) => props.theme.colors.whiteGlobal};
-        width: 100%;
-        font-weight: ${(props) => props.theme.weight.fontWeightBold};
-        text-align: center;
-        font-size: 20px;
-        background-color: ${(props) => props.theme.colors.darkBlack};
+    justify-content: center;
+    align-items: flex-start;
+    border-top: 1px solid ${(props) => props.theme.colors.lightBrown};
+    border-bottom: 1px solid ${(props) => props.theme.colors.lightBrown};
+
+    @media (max-width: 800px) {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
         }
+
+    
 `;
-export const ContainerProductor = styled.div`
+export const Productor = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
     width: 100%;
-    height: 100%;
-    display: flex;
-   img{
-    width: 150px;
-    height: 100px;
-    border-radius: 10px;
-   }
-   p{
-       color: ${(props) => props.theme.colors.darkBlack};
-       font-weight: ${(props) => props.theme.weight.fontWeightSemiBold};
-       font-size: 20px;
-       margin-left: 10px;
-   }
-   a{
-       margin-left: 20px;
-       color: ${(props) => props.theme.colors.darkBlack};
-       position: relative;
-       top: 10px;
-       font-size: 15px;
-   }
-    
-`;
-export const ContainerDropdown = styled.div`
-    display: flex;
-    height: 0px;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 75px;
-    
-    select{
-        width: 50px;
-        height: 40px;
+    margin-block: 20px;
+   
+    img{
+        width: 150px;
         border-radius: 5px;
-        border: 2px solid ${(props) => props.theme.colors.darkBlack};
         
+        @media (max-width: 550px) {
+            width: 100px;
+        }
     }
-    a{
-        margin-left: 0px;
-    }
-`;
-export const ContainerValor = styled.div`
-    display: flex;
-    width: 200px;
-    height: 60px;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 290px;
-    p{
+    span{
         color: ${(props) => props.theme.colors.darkBlack};
-    }
-`;
-export const ContainerContinuar = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    p{
-        color: ${(props) => props.theme.colors.darkBlack};
-        font-size: 30px;
         font-weight: ${(props) => props.theme.weight.fontWeightBold};
+        font-size: 20px;
+        margin-left: 15px;
+
+        @media (max-width: 550px) {
+            font-size: 17px;
+        }
     }
 
-    button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 300px;
-        height: 50px;
-        font-size: 30px;
-        font-family: Lucida sans;
-        background-color: ${(props) => props.theme.colors.darkGreen};
-        color: ${(props) => props.theme.colors.whiteGlobal};
+`;
+export const TheAmount = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    margin-block: 20px;
+    
+    @media (max-width: 800px) {
+            position: relative;
+            bottom: 75px;
+            left: 80px;
+        }
+        @media (max-width: 550px) {
+            position: relative;
+            bottom: 50px;
+            left: 15px;
+        }
+
+    select{
+        font-size: 17px;
         border-radius: 5px;
-        margin-top: 5px;
-        border: none;
+        width: 40px;
+        height: 40px;
+        border: 2px solid ${(props) => props.theme.colors.darkBlack};
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 11px;
+        text-overflow: '';
+
+        @media (max-width: 550px) {
+            width: 35px;
+            height: 35px;
+            text-indent: 6px;
+        }
+        @media (max-width: 380px) {
+            width: 35px;
+            height: 35px;
+            text-indent: 2px;
+        }
+    }
+    button{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+        background-color: ${(props) => props.theme.colors.whiteGlobal};
+        color: ${(props) => props.theme.colors.darkBlack};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
         border: 1px solid ${(props) => props.theme.colors.darkBlack};
+        
+        :hover{
+            border: 1px solid ${(props) => props.theme.colors.royalBlue};
+            box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.royalBlue};
+        }
+
+        @media (max-width: 550px) {
+            font-size: 12px;
+        }
+    }
+
+    
+`;
+export const Value = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin-block: 20px;
+    position: relative;
+    bottom: 10px;
+    
+
+    @media (max-width: 800px) {
+            position: relative;
+            bottom: 85px;
+            left: 90px;
+        }
+        @media (max-width: 550px) {
+            position: relative;
+            bottom: 65px;
+            left: 15px;
+        }
+
+    p{
+        font-size: 20px;
+        color: ${(props) => props.theme.colors.darkBlack};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
+
+        @media (max-width: 550px) {
+            font-size: 18px;
+        }
+    }
+    i{
+        font-size: 22px;
+        color: ${(props) => props.theme.colors.darkBlack};
         font-weight: ${(props) => props.theme.weight.fontWeightBold};
 
         :hover{
-            border: 1px solid ${(props) => props.theme.colors.darkBlack};
-            box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.darkBlack};
-            cursor: pointer;
+            color: ${(props) => props.theme.colors.lightBrown};
+        }
+
+        @media (max-width: 550px) {
+            margin-left: 30px;
+        }
+
+        @media (max-width: 380px) {
+            margin-left: 15px;
+        }
+    }    
+`;
+
+export const Total = styled.div`
+    display: flex;
+    width: 90%;
+    height: 30%;
+    justify-content: flex-end;
+    align-items: center;
+
+    p{
+        font-size: 25px;
+        color: ${(props) => props.theme.colors.darkBlack};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
+
+        @media (max-width: 550px) {
+            font-size: 20px;
         }
     }
+`;
+export const ButtonContinuar = styled.div`
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        width: 25%;
+        height: 60px;
+        background-color: ${(props) => props.theme.colors.darkGreen};
+        color: ${(props) => props.theme.colors.whiteGlobal};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
+        border-radius: 5px;
+        border: none;
+        border: 1px solid ${(props) => props.theme.colors.darkBlack};
+        
+        :hover{
+            border: 1px solid ${(props) => props.theme.colors.royalBlue};
+            box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.royalBlue};
+            cursor: pointer;
+        }
+
+        @media (max-width: 800px) {
+            width: 30%;
+            font-size: 29px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            width: 50%;
+            font-size: 27px;
+        }
 `;

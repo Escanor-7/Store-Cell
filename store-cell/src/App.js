@@ -14,8 +14,8 @@ function App() {
         
             {/*...*/}
             <ThemeProvider theme={theme}  >
-                {/* <Header />
-                <Home /> 
+                <Header />
+                {/* <Home /> 
                 <Login />*/}
                 <Carrinho/>
             </ThemeProvider>

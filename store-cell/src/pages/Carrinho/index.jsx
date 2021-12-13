@@ -7,65 +7,43 @@ const Carrinho = () => {
 
             <h1>Minha Sacola</h1>
 
-            <S.ContainerItens>
+            <S.ContainerOptions>
 
-                <S.ContainerOpcoes>
+                <S.Productor>
+                    <img src="./img/CardCell.img/Cell-Iphone/Iphone01.jpg" alt="Celulariphone" />
+                    <span>iPhone 11 Apple 128GB Preto tela 6,1" Câmera 12MP iOS</span>
+                </S.Productor>
 
-                    <S.OpcoesQuantidade>
-                        <p>Quantidade</p>
-                    </S.OpcoesQuantidade>
+                <S.TheAmount>
+                    <button>+</button>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <button>-</button>
+                </S.TheAmount>
 
-                    <S.OpcoesPreco>
-                        <p>Preço</p>
-                    </S.OpcoesPreco>
+                <S.Value>
+                    <p>R$:4.347,00</p>
+                    <i class="bi bi-trash-fill"></i>
+                </S.Value>
 
-                </S.ContainerOpcoes>
+            </S.ContainerOptions>
 
-                <S.ContainerProductor>
-                    <img src="./img/CardCell.img/Cell-Iphone/Iphone01.jpg" alt="Celular Iphone" />
-                    <div>
-                        <p>iPhone 11 Apple 128GB Preto 6,1” 12MP iOS</p>
-                    </div>
+            <S.Total>
 
-                    <S.ContainerDropdown>
+                <p>Total: R$:4.347,00</p>
 
-                        <select>
-                            <option selected value="#">1</option>
-                            <option value="#">2</option>
-                            <option value="#">3</option>
-                            <option value="#">4</option>
-                            <option value="#">5</option>
-                        </select>
-                        
-                    </S.ContainerDropdown>
+            </S.Total>
 
-                    <div>
-                        <a href="link">Remover</a>
-                    </div>
+            <S.ButtonContinuar>
+                
+                    Continuar
+                
+            </S.ButtonContinuar>
 
-                    <S.ContainerValor>
-                        <p>
-                            R$ 4.184,07 à vista
-                        </p>
-                    </S.ContainerValor>
-
-                </S.ContainerProductor>
-
-                <S.ContainerContinuar>
-                    <div>
-                        <p>
-                            Total: R$ 4.184,07
-                        </p>
-                    </div>
-
-                    <div>
-                        <button>
-                            Continuar
-                        </button>
-                    </div>
-                </S.ContainerContinuar>
-
-            </S.ContainerItens>
         </S.Container>
     )
 }
