@@ -2,41 +2,49 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    height:100%;
+    height:100vh;
     justify-content: center;
     align-items: center;
     display: flex;
     position: fixed;
     right: 10px;
-    background-color: #00000080;
+    background-color: ${(props) => props.theme.colors.gray};
+    font-family: ${(props) => props.theme.fontFamilies.sansSerif};
     top: 0px;
     left: 0px
 `;
 export const Popup = styled.div`
     width: 90%;
-    height: 85%;
-    position: relative;
-    bottom: 100px;
-    background-color: #2b2b2c;
-    top: auto;
-    bottom: auto;
+    height: 90%;
+    background-color: ${(props) => props.theme.colors.whiteGlobal};
     border-radius: 10px;
-    border: 1px solid white;
-    box-shadow: 0 0 7px -1px white;
+    border: 1px solid ${(props) => props.theme.colors.whiteGlobal};;
+    box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.whiteGlobal};;
     
     
     h1{
-        font-family: Lucida sans;
         font-size: 50px;
-        color: white;
+        color: ${(props) => props.theme.colors.darkBlack};
         position: relative;
-        bottom: 11%;
+        bottom: 10%;
+
+        @media (max-width: 1080px) {
+            bottom: 15%;
+        }
     }
 `;
 export const Cadastro = styled.div`
     width: 100%;
     position: relative;
     bottom: 15%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1080px) {
+        bottom: 20%;
+        }
+
 `;
 export const InputContainer = styled.div`
     display: flex;
@@ -44,12 +52,6 @@ export const InputContainer = styled.div`
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 10px;
-
-    label {
-        font-size: 20px;
-        color: #eff3f5;
-        margin: 0px 0px 10px 22px;
-    }
 
     div {
         display: flex;
@@ -62,55 +64,77 @@ export const InputContainer = styled.div`
             left: 25px;
             font-size: 25px;
             margin-left: 10px;
-            color: #434242;
+            color: ${(props) => props.theme.colors.darkGray};
         }
 
         input{
-            color: #434242;
+            color: ${(props) => props.theme.colors.darkGray};
             margin-left: 10px;
             margin-right: 10px;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             display: flex;
             align-items: center;
-            background-color: white;
+            background-color: ${(props) => props.theme.colors.whiteGlobal};
             border-radius: 5px;
             height: 50px;
-            border: 1px solid #b0b0b0;
+            border: 1px solid ${(props) => props.theme.colors.darkBlack};
             padding-left: 50px;
 
             :hover{
-                border: 1px solid #006272;
-                box-shadow: 0 0 7px -1px #006272;
+                border: 1px solid ${(props) => props.theme.colors.royalBlue};
+                box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.royalBlue};
             }
+
         }
     }
 
 `;
 
-export const ButtonCadastrar = styled.button`
+export const ContainerButton = styled.div`
         display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 30px;
-        font-family: Lucida sans;
-        width: 15%;
-        height: 60px;
-        background-color: green;
-        color: white;
-        font-weight: 700;
-        border-radius: 5px;
-        border: none;
-        margin-inline: auto;
-        position: relative;
-        bottom: 17%;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin-inline: 30px;
+        margin-block: 10px;
 
-        outline-width: 0;
+        @media (max-width: 550px) {
+            margin-inline: 15px;
+        }
+`;
+
+export const ButtonCadastrar = styled.button`
+        font-size: 30px;
+        width: 25%;
+        height: 60px;
+        background-color: ${(props) => props.theme.colors.darkGreen};
+        color: ${(props) => props.theme.colors.whiteGlobal};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
+        border-radius: 5px;
+        border: 1px solid ${(props) => props.theme.colors.darkBlack};
+        margin-top: 20px;
 
         :hover{
-            border: 1px solid white;
-            box-shadow: 0 0 7px -1px white;
+            border: 1px solid ${(props) => props.theme.colors.royalBlue};
+            box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.royalBlue};
             cursor: pointer;
+        }
+
+        @media (max-width: 1080px) {
+            width: 30%;
+            font-size: 30px;
+            position: relative;
+            bottom: 25px;
+        }
+
+        @media (max-width: 800px) {
+            width: 30%;
+            font-size: 25px;
+        }
+
+        @media (max-width: 600px) {
+            width: 50%;
+            font-size: 25px;
         }
 `;
 export const ButtonX = styled.button`
@@ -118,21 +142,36 @@ export const ButtonX = styled.button`
         align-items: center;
         justify-content: center;
         font-size: 25px;
-        font-family: Lucida sans;
-        width: 3%;
+        width: 4%;
         height: 35px;
-        background-color: #1a1a1d;
-        color: #eff2f5;
+        background-color: ${(props) => props.theme.colors.whiteGlobal};
+        color: ${(props) => props.theme.colors.darkBlack};
         font-weight: 700;
         border-radius: 5px;
-        margin-top: 10px;
         border: none;
-        margin-left: auto;
-        margin-right: 15px;
+        border: 1px solid ${(props) => props.theme.colors.darkBlack};
 
         :hover{
-            border: 1px solid white;
-            box-shadow: 0 0 7px -1px white;
+            border: 1px solid ${(props) => props.theme.colors.royalBlue};
+            box-shadow: 0 0 7px -1px ${(props) => props.theme.colors.royalBlue};
             cursor: pointer;
+        }
+
+        @media (max-width: 870px) {
+            width: 5%;
+            height: 35px;
+        }
+        @media (max-width: 700px) {
+            width: 7%;
+            height: 35px;
+        }
+        @media (max-width: 500px) {
+            width: 9%;
+            height: 35px;
+        }
+        @media (max-width: 400px) {
+            width: 12%;
+            height: 35px;
+            margin-left: 30px;
         }
 `;

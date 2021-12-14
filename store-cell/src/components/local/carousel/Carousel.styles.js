@@ -4,9 +4,10 @@ export const Banner = styled.img`
     width:100%;
 `;
 export const Container = styled.div`
-    background-color: #2c2b2b;
+    background-color: transparent;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
 
     /* Foi assim que consegui acessar as setas do slider */
     div {

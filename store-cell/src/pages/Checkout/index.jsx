@@ -27,20 +27,23 @@ const Checkout = () => {
                 <S.RevisaoDoPedido>
 
                     <S.Descrition>
+
                         <div>
                             <span>
                                 Entrega 01 de 01 por Loja Oficial Apple - Receba em até 5 dias úteis
                                 01 iPhone 11 64GB - Preto - Apple
                             </span>
                         </div>
-                        <div>
+
+                        <S.Endereço>
                             <span>
                                 Endereço para a entrega 01: Pasquale Gallupi, 02, VIELA DA PAZ - Sao Paulo/SP
                             </span>
                             <div>
                                 <a href="Link">Editar endereço</a>
                             </div>
-                        </div>
+                        </S.Endereço>
+
                     </S.Descrition>
 
                     <S.SubDescrition>
@@ -69,16 +72,19 @@ const Checkout = () => {
 
                     <h3>Forma de Pagamento</h3>
 
-                    <div className="radiosContainer">
-                        <div className="creditCard">
+                    <S.RadiosContainer className="radiosContainer">
+                        <S.InputButton className="creditCard">
                             <input type="radio"
                                 id="creditCard"
                                 name="formPayment"
                                 onClick={handleCreditCardForm} />
 
-                            <label>Cartão de credito</label>
+                            <S.Cartao>
+                                <i class="bi bi-credit-card"></i>
+                                <label>Cartão de credito</label>
+                            </S.Cartao>
 
-                        </div>
+                        </S.InputButton>
 
                         {creditCardForm &&
 
@@ -164,24 +170,37 @@ const Checkout = () => {
                                 </S.InputContainer>
 
                             </S.ContainerCartaoDeCredito>}
-                    </div>
+                    </S.RadiosContainer>
 
                 </S.ContainerPagamento>
 
                 <S.ContainerPagamento>
-                    <div>
+                    <S.InputButton>
                         <input type="radio"
                             name="formPayment"
                             onClick={handleBilletPrintingButton} />
-                        <label>Boleto</label>
-                    </div> {billetPrinting && <button>Imprimir Boleto</button>}
+
+                        <S.Boleto>
+                            <i class="bi bi-download"></i>
+                            <label>Boleto</label>
+                        </S.Boleto>
+
+                    </S.InputButton> {billetPrinting &&
+
+                        <S.ButtonBoleto>
+                            <i class="bi bi-download"></i>
+                            Imprimir Boleto
+                        </S.ButtonBoleto>
+                    }
+
                 </S.ContainerPagamento>
 
-                <div>
+                <S.ButtonFinalizar>
                     <button>
                         Finalizar
                     </button>
-                </div>
+                </S.ButtonFinalizar>
+
             </S.ContainerDescriçoes>
 
 
