@@ -20,6 +20,7 @@ const theme = {
     darkGreen: '#006400', //color default of button
     gray: '#808080', // default color for eyeshadows for input
     royalBlue: '#4169E1', // color default for hover for boder, box shandow
+    DarkGoldenrod: '#B8860B',
   },
 
   fontFamilies: {
