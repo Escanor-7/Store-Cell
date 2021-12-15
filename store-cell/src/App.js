@@ -12,8 +12,8 @@ function App() {
     return (
         <>
             <ThemeProvider theme={theme}  >
-                {/* <Header />
-                <Home /> 
+                 <Header />
+                {/*<Home /> 
                 <Login />*/}
                 <Checkout/>
             </ThemeProvider>
