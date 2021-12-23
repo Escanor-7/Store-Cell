@@ -6,6 +6,7 @@ import Login from './pages/Login/index';
 import Carrinho from './pages/Carrinho/index';
 import Home from "./pages/Home";
 import Checkout from './pages/Checkout/index'
+import Requests from "./pages/Requests/index.jsx";
 // Este componente App é onde vamos importar as páginas e criar nossas rotas
 
 function App() {
@@ -14,14 +15,15 @@ function App() {
         <>
         
             <ThemeProvider theme={theme}  >
-                <Header />
+                {/*<Header />
                 <Home /> 
                 <Login />
                 <Carrinho/>
-                <Checkout/>
+                <Checkout/>*/}
+                <Requests/>
             </ThemeProvider>
         </>
     )
 }
-
+ 
 export default App;
