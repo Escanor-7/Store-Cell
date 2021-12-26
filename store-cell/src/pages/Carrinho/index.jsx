@@ -18,9 +18,6 @@ const Carrinho = () => {
                     <button>+</button>
                     <select>
                         <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
                     </select>
                     <button>-</button>
                 </S.TheAmount>

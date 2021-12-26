@@ -15,11 +15,11 @@ function App() {
         <>
         
             <ThemeProvider theme={theme}  >
-                {/*<Header />
+                <Header />
                 <Home /> 
                 <Login />
                 <Carrinho/>
-                <Checkout/>*/}
+                <Checkout/>
                 <Requests/>
             </ThemeProvider>
         </>
