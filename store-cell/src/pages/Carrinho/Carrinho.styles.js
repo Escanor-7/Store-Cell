@@ -78,29 +78,6 @@ export const TheAmount = styled.div`
             bottom: 50px;
             left: 15px;
         }
-
-    select{
-        font-size: 17px;
-        border-radius: 5px;
-        width: 40px;
-        height: 40px;
-        border: 2px solid ${(props) => props.theme.colors.darkBlack};
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        text-indent: 11px;
-        text-overflow: '';
-
-        @media (max-width: 550px) {
-            width: 35px;
-            height: 35px;
-            text-indent: 6px;
-        }
-        @media (max-width: 380px) {
-            width: 35px;
-            height: 35px;
-            text-indent: 2px;
-        }
-    }
     button{
         margin-left: 10px;
         margin-right: 10px;
@@ -122,6 +99,27 @@ export const TheAmount = styled.div`
 
     
 `;
+
+export const ButtonNumber = styled.button`
+        font-size: 17px;
+        border-radius: 5px;
+        width: 40px;
+        height: 40px;
+        border: 2px solid ${(props) => props.theme.colors.darkBlack};
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-overflow: '';
+
+        @media (max-width: 550px) {
+            width: 35px;
+            height: 35px;
+        }
+        @media (max-width: 380px) {
+            width: 35px;
+            height: 35px;
+        }
+`;
+
 export const Value = styled.div`
     display: flex;
     justify-content: space-between;

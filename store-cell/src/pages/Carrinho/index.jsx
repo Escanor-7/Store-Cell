@@ -2,6 +2,8 @@ import React from 'react';
 import * as S from './Carrinho.styles.js'
 
 const Carrinho = () => {
+
+
     return (
         <S.Container>
 
@@ -16,13 +18,11 @@ const Carrinho = () => {
 
                 <S.TheAmount>
                     <button>+</button>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
+
+                    <S.ButtonNumber>1</S.ButtonNumber>
+
                     <button>-</button>
+
                 </S.TheAmount>
 
                 <S.Value>
