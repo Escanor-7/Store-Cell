@@ -1,7 +1,7 @@
 import React from 'react';
-import * as S from './Carrinho.styles.js'
+import * as S from './Cart.styles.js'
 
-const Carrinho = () => {
+const Cart = () => {
     return (
         <S.Container>
 
@@ -45,4 +45,4 @@ const Carrinho = () => {
     )
 }
 
-export default Carrinho;
+export default Cart;
