@@ -17,10 +17,10 @@ const RoutesComponent = () => {
             <BrowserRouter>
                 <Header />
                 <Routes>
-                    {/* <Route path='/' element={<Home />} /> */}
+                    <Route path='/' element={<Home />} />
                     <Route path='/login' element={<Login />} />,
-                    {/* <Route path='/register' element={<Register />} /> */}
-                    {/* <Route path='/cart' element={<Cart />} /> */}
+                    <Route path='/register' element={<Register />} />
+                    <Route path='/cart' element={<Cart />} />
                 </Routes>
                 {/* <Footer/> */}
             </BrowserRouter>

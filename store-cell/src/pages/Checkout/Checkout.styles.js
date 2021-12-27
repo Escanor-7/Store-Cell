@@ -326,7 +326,7 @@ export const ButtonFinalizar = styled.div`
         align-items: center;
 
         button{
-            display: flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         width: 300px;
