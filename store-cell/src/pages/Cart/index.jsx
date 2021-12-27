@@ -1,9 +1,13 @@
 import React from 'react';
-import * as S from './Carrinho.styles.js'
+import * as S from './Cart.styles.js'
 
+<<<<<<< HEAD:store-cell/src/pages/Carrinho/index.jsx
 const Carrinho = () => {
 
 
+=======
+const Cart = () => {
+>>>>>>> 2e9a0fca99ef35b8d9fe266ec1778f184f91c9b7:store-cell/src/pages/Cart/index.jsx
     return (
         <S.Container>
 
@@ -18,9 +22,15 @@ const Carrinho = () => {
 
                 <S.TheAmount>
                     <button>+</button>
+<<<<<<< HEAD:store-cell/src/pages/Carrinho/index.jsx
 
                     <S.ButtonNumber>1</S.ButtonNumber>
 
+=======
+                    <select>
+                        <option>1</option>
+                    </select>
+>>>>>>> 2e9a0fca99ef35b8d9fe266ec1778f184f91c9b7:store-cell/src/pages/Cart/index.jsx
                     <button>-</button>
 
                 </S.TheAmount>
@@ -48,4 +58,4 @@ const Carrinho = () => {
     )
 }
 
-export default Carrinho;
+export default Cart;
