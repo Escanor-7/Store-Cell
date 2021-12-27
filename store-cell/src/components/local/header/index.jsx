@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as S from './Header.styles.js';
 import SideMenu from "../sideMenu/index.jsx";
 
@@ -10,13 +11,18 @@ const Header = () => {
             <S.MobileOptionsList>
                 <SideMenu />
             </S.MobileOptionsList>
-            <S.LogoContainer>
-                <S.CardImg src="./img/Store-cell.png" alt="logoStoreCell" />
-                <p>StoreCell</p>
-            </S.LogoContainer>
+
+            <Link to="home" style={{ textDecoration: 'none' }} >
+                <S.LogoContainer>
+                    <S.CardImg src="./img/Store-cell.png" alt="logoStoreCell" />
+                    <p>StoreCell</p>
+                </S.LogoContainer>
+            </Link>
 
             <S.Item href="#" >Smartphones</S.Item>
-            <S.Item href="#" >Meus Pedidos</S.Item>
+            <Link to="requests" style={{ textDecoration: 'none' }} >
+                <S.Item href="#" >Meus Pedidos</S.Item>
+            </Link>
 
             <S.SearchBar action="#">
                 <S.searchInput type="text" className="search-input" placeholder="O que deseja encontrar ?" />
@@ -27,10 +33,18 @@ const Header = () => {
             </S.SearchBar>
 
             <S.login className="login">
-                <S.BiPerson className="bi bi-person-fill" />
-                <a>Login</a>
+
+                <Link to="login" style={{ textDecoration: 'none' }} >
+                    <S.BiPerson className="bi bi-person-fill" />
+                    <a>Login</a>
+                </Link>
+
             </S.login>
-            <S.BiBag className="bi bi-bag" />
+
+            <Link to="cart" style={{ textDecoration: 'none' }} >
+                <S.BiBag className="bi bi-bag" />
+            </Link>
+
         </S.Container>
     )
 }

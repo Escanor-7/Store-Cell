@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ThemeProvider } from "styled-components";
 import theme from './designSystem/designSystem.js';
 import Login from './pages/Login/index';
@@ -17,10 +17,12 @@ const RoutesComponent = () => {
             <BrowserRouter>
                 <Header />
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/home' element={<Home />} />
                     <Route path='/login' element={<Login />} />,
                     <Route path='/register' element={<Register />} />
                     <Route path='/cart' element={<Cart />} />
+                    <Route path='/checkout' element={<Checkout />} />
+                    <Route path='/requests' element={<Requests />} />
                 </Routes>
                 {/* <Footer/> */}
             </BrowserRouter>
