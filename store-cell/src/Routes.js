@@ -18,9 +18,11 @@ const RoutesComponent = () => {
                 <Header />
                 <Routes>
                     <Route path='/home' element={<Home />} />
-                    {/* <Route path='/login' element={<Login />} />, */}
-                    {/* <Route path='/register' element={<Register />} /> */}
-                    {/* <Route path='/cart' element={<Cart />} /> */}
+                    <Route path='/login' element={<Login />} />,
+                    <Route path='/register' element={<Register />} />
+                    <Route path='/cart' element={<Cart />} />
+                    <Route path='/checkout' element={<Checkout />} />
+                    <Route path='/requests' element={<Requests />} />
                 </Routes>
                 {/* <Footer/> */}
             </BrowserRouter>
