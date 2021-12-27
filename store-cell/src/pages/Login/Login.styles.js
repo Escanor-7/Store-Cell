@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const Login = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     height: 100%;
     background-color: ${(props) => props.theme.colors.whiteGlobal};
     text-align: center;

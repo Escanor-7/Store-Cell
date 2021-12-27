@@ -1,9 +1,7 @@
 import React from "react";
 import * as S from './Register.styles.js'
 
-const Register = ({ setClosePopup }) => {
-    console.log('resultado', setClosePopup)
-    const handleClosePopup = () => setClosePopup(false);
+const Register = () => {
 
     return (
 
@@ -11,7 +9,7 @@ const Register = ({ setClosePopup }) => {
             <S.Popup>
 
                 <S.ContainerButton>
-                    <S.ButtonX type="button" onClick={() => handleClosePopup()}>X</S.ButtonX>
+                    <S.ButtonX type="button">X</S.ButtonX>
                 </S.ContainerButton>
 
                 <h1>Cadastro</h1>
