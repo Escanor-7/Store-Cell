@@ -191,7 +191,7 @@ export const ButtonContinuar = styled.div`
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        width: 25%;
+        width: 300px;
         height: 60px;
         background-color: ${(props) => props.theme.colors.darkGreen};
         color: ${(props) => props.theme.colors.whiteGlobal};
