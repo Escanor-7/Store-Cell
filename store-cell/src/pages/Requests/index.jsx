@@ -69,7 +69,7 @@ const Requests = () => {
                         <p>Pagamento: <i class="bi bi-credit-card"></i> Credito</p>
                     </div>
 
-                    <div>
+                    <div id="footer">
                         <p>Frete: R$: 10,00</p>
                     </div>
 
