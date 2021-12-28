@@ -5,6 +5,7 @@ export const Container = styled.div`
    justify-content: space-around;
    max-width: 100%;
    background-color: ${(props) => props.theme.colors.darkBlack};
+   font-family: ${(props) =>props.theme.fontFamilies.sansSerif};
    align-items: center;
    padding: 15px;
 

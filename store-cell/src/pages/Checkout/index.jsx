@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import * as S from './Checkout.styles.js';
 
 const Checkout = () => {
@@ -195,11 +196,14 @@ const Checkout = () => {
 
                 </S.ContainerPagamento>
 
-                <S.ButtonFinalizar>
-                    <button>
-                        Finalizar
-                    </button>
-                </S.ButtonFinalizar>
+                <Link to='/requests' style={{textDecoration: 'none'}}>
+                    <S.ButtonFinalizar>
+                        <button>
+                            Finalizar
+                        </button>
+                    </S.ButtonFinalizar>
+                </Link>
+
 
             </S.ContainerDescriçoes>
 
