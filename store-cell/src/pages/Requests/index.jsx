@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as S from './Requests.styles.js';
 
 const Requests = () => {
@@ -69,16 +70,18 @@ const Requests = () => {
                     </div>
 
                     <div>
-                            <p>Frete: R$: 10,00</p>
+                        <p>Frete: R$: 10,00</p>
                     </div>
 
                 </S.InforOrdenRow>
 
             </S.Options>
 
-            <div>
-                <button>Continuar</button>
-            </div>
+            <Link to='/home' style={{ textDecoration: 'none' }}>
+                <div>
+                    <button>Voltar para home</button>
+                </div>
+            </Link>
 
         </S.Container>
     )
