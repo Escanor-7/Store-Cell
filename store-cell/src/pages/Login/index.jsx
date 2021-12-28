@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as S from './Login.styles.js'
 
 
@@ -43,9 +44,13 @@ const Login = () => {
 
                     <h4>Não tenho conta!</h4>
 
-                    <S.ButtonCadastrar type="button">
-                        Cadastra-se
-                    </S.ButtonCadastrar>
+                    <Link to='/register' style={{ textDecoration: 'none' }}>
+                        <S.ButtonCadastrar type="button">
+                            Cadastra-se
+                        </S.ButtonCadastrar>
+                    </Link>
+
+
                 </S.ButtonContainer>
 
             </S.Login>
