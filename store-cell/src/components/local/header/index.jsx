@@ -1,51 +1,49 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as S from './Header.styles.js';
+import SideMenu from "../sideMenu/index.jsx";
 
 
 const Header = () => {
 
     return (
-
         <S.Container>
-            <div>
-                <S.CardImg src="./img/Store-cell.png" alt="logoStoreCell" />
-            </div>
-            <div>
-                <S.StoreCell>
-                    StoreCell
-                </S.StoreCell>
-            </div>
-            <nav>
-                <S.ul>
-                    <S.li>
-                        <S.a href="#">Home</S.a>
-                    </S.li>
-                    <S.li>
-                        <S.a href="#">Smartphones</S.a>
-                    </S.li>
-                    <S.li>
-                        <S.a href="#">Meus Pedidos</S.a>
-                    </S.li>
-                </S.ul>
-            </nav>
+            <S.MobileOptionsList>
+                <SideMenu />
+            </S.MobileOptionsList>
 
-            <form action="#">
-                <S.searchInput type="text" className="search-input" placeholder="Search" />
+            <Link to="home" style={{ textDecoration: 'none' }} >
+                <S.LogoContainer>
+                    <S.CardImg src="./img/Store-cell.png" alt="logoStoreCell" />
+                    <p>StoreCell</p>
+                </S.LogoContainer>
+            </Link>
+
+            <S.Item href="#" >Smartphones</S.Item>
+            <Link to="requests" style={{ textDecoration: 'none' }} >
+                <S.Item href="#" >Meus Pedidos</S.Item>
+            </Link>
+
+            <S.SearchBar action="#">
+                <S.searchInput type="text" className="search-input" placeholder="O que deseja encontrar ?" />
 
                 <S.searchBtn className="search-btn">
                     <i className="bi bi-search"></i>
                 </S.searchBtn>
-            </form>
+            </S.SearchBar>
 
-            <nav>
-                <S.login className="login">
-                    <S.li>
-                        <S.biPerson className="bi bi-person-fill"></S.biPerson>
-                        <S.a href="#">Login</S.a>
-                        <S.biBag className="bi bi-bag"></S.biBag>
-                    </S.li>
-                </S.login>
-            </nav>
+            <S.login className="login">
+
+                <Link to="login" style={{ textDecoration: 'none' }} >
+                    <S.BiPerson className="bi bi-person-fill" />
+                    <a>Login</a>
+                </Link>
+
+            </S.login>
+
+            <Link to="cart" style={{ textDecoration: 'none' }} >
+                <S.BiBag className="bi bi-bag" />
+            </Link>
 
         </S.Container>
     )

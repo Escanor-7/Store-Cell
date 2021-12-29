@@ -1,68 +1,214 @@
 import styled from "styled-components";
 
+export const Footer = styled.div`
+width: 100%;
+height: 60vh;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+background-color: ${(props) => props.theme.colors.darkBlack};
+font-family: ${(props) => props.theme.fontFamilies.sansSerif};
+margin-top: 5%;
+
+@media (max-width: 1120px) {
+    height: 55vh;
+        }
+        @media (max-width: 930px) {
+    height: 30vh;
+        }
+`;
 
 export const Container = styled.div`
-background: #2b2b2b;
-color: white;
+width: 90%;
+height: 100%;
 display: flex;
 align-items: center;
-justify-content: space-around;
-font-family: poppis, Helvetica;
-widht: 100%;
-border-top: 8px solid #4a4747;`;
+justify-content: center;
 
-export const Box1 = styled.div`
+@media (max-width: 520px) {
+            width: 95%;
+           height: 95%;
+        }
+
+        @media (max-width: 1120px) {
+            border: none;
+            box-shadow: none;
+        }
+
+`;
+
+export const Contacts = styled.div`
+width: 100%;
+height: 100%;
 display: flex;
 flex-direction: column;
-align-items: flex-start;
-margin-bottom: 0.9rem;
+justify-content: space-between;
+border-right: 1px solid ${(props) => props.theme.colors.whiteGlobal};
+@media (max-width: 1120px) {
+            border: none;
+            box-shadow: none;
+        }
 
 `;
 
-
-export const Box2 = styled.div`
-margin-bottom: 0.9rem;
-`;
-
-export const Info = styled.div`
+export const Safety = styled.div`
+width: 100%;
+height: 100%;
 display: flex;
-align-items: center
-`
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
 
-export const InfoMidias = styled.div`
+@media (max-width: 1120px) {
+    border-left: 1px solid ${(props) => props.theme.colors.whiteGlobal};
+    border-right: 1px solid ${(props) => props.theme.colors.whiteGlobal};
+        }
+
+
+    img{
+    width: 200px;
+
+    @media (max-width: 1100px) {
+            width: 150px
+        }
+
+        @media (max-width: 650px) {
+            width: 120px
+        }
+        @media (max-width: 520px) {
+            width: 90px
+        }
+}
+
+`;
+
+export const Terms = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+border-left: 1px solid ${(props) => props.theme.colors.whiteGlobal};
+@media (max-width: 1120px) {
+            border: none;
+            box-shadow: none;
+        }
+
+`;
+export const Title = styled.div`
+width: 100%;
 display: flex;
 align-items: center;
-justify-content: space-around;
-font-size: 1rem;
+justify-content: center;
 
+
+h2{
+    color: ${(props) => props.theme.colors.whiteGlobal};
+    font-weight: ${(props) => props.theme.weight.fontWeightBold};
+    height: 20px;
+
+    @media (max-width: 650px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 520px) {
+            font-size: 15px;
+        }
+}
+i{
+    color: ${(props) => props.theme.colors.whiteGlobal};
+    margin-inline: 5px;
+    font-size: 25px;
+
+    @media (max-width: 650px) {
+        font-size: 18px;
+        }
+        @media (max-width: 520px) {
+            font-size: 15px;
+        }
+}
 `;
+export const SubTitle = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
 
-export const MidiasFinish = styled.div``;
+div{
+    margin-bottom: 5px;
+}
 
-export const MidiasFhotos = styled.div`
+h3{
+    color: ${(props) => props.theme.colors.whiteGlobal};
+    font-weight: ${(props) => props.theme.weight.fontWeightBold};
 
-display:flex;
-justify-content:center;
-align-items: center;
+    @media (max-width: 650px) {
+            font-size: 17px;
+        }
+        @media (max-width: 520px) {
+            font-size: 13px;
+        }
+}
+h5{
+    color: ${(props) => props.theme.colors.whiteGlobal};
+    font-weight: ${(props) => props.theme.weight.fontWeightBold};
 
-`
+    @media (max-width: 870px) {
+            font-size: 10px;
+        }
+        @media (max-width: 650px) {
+            font-size: 8px;
+        }
+        @media (max-width: 520px) {
+            font-size: 6px;
+            font-weight: ${(props) => props.theme.weight.fontWeightRegular};
+        }
+}
+i{
+    color: ${(props) => props.theme.colors.whiteGlobal};
+    margin-inline: 10px;
+    font-size: 25px;
 
-export const Space = styled.div`
-margin: 0.5rem;
-`
-export const IconsMidias = styled.img`
+    @media (max-width: 650px) {
+            font-size: 18px;
+        }
+        @media (max-width: 520px) {
+            font-size: 15px;
+        }
+}
 
-transition: transform 1s;
-width: 4.4rem;
-transform: translateX(0) scale(0.7);
-    :hover{
-        transform: translateX(1rem) scale(1.2);
-    }
+img{
+    width: 200px;
+
+    @media (max-width: 1100px) {
+            width: 135px
+        }
+
+        @media (max-width: 650px) {
+            width: 115px
+        }
+        @media (max-width: 520px) {
+            width: 90px
+        }
+}
 `;
+export const Description = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
 
-export const LogoImg = styled.img`
+p{
+    color: ${(props) => props.theme.colors.whiteGlobal};
+    ${(props) => props.theme.weight.fontWeightBold};
 
-width: 70%;
-height: auto;
-
+    @media (max-width: 650px) {
+            font-size: 12px;
+        }
+        @media (max-width: 520px) {
+            font-size: 10px;
+        }
+}
 `;

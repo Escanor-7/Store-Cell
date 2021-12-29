@@ -1,54 +1,79 @@
 import React from "react"
-import * as C from './Footer.style'
+import * as S from './Footer.style'
 
-const Footer = () =>{
+const Footer = () => {
 
-    return(
-     
-        <C.Container>
-            
-            <C.Box1>
-                <C.Info>
-                    <h2>Informações de Contato</h2>
-                    <C.Space/>
+    return (
 
-                    <img src="https://img.icons8.com/fluency/48/000000/info.png"/>
-                </C.Info>
-           
-                <C.InfoMidias>
-                    <C.IconsMidias src="https://img.icons8.com/external-justicon-flat-justicon/64/000000/external-phone-notifications-justicon-flat-justicon.png" />
-                    <C.Space/>
-                    <h2>(11) 0977449550</h2>
-                </C.InfoMidias>
-                
-                <C.InfoMidias>
-                    <C.IconsMidias src="https://img.icons8.com/color/48/000000/gmail-new.png"/>
-            
-                    <C.Space/>
-                    
-                    <h2>StoreCell@gmail.com</h2>
-                </C.InfoMidias>
-           
-                <C.MidiasFinish>
-                    <h2>Nos sigas as redes Sociais!</h2>
+        <S.Footer>
+            <S.Container>
+                <S.Contacts>
 
-                    <C.MidiasFhotos>
-                        <C.IconsMidias src="https://img.icons8.com/color/48/000000/facebook-circled--v1.png" />
-                        <C.IconsMidias  src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/>
-                        <C.IconsMidias src="https://img.icons8.com/color/48/000000/twitter--v2.png" />
+                    <S.Title>
+                        <h2>Contatos</h2>
+                        <i className="bi bi-person-fill"></i>
+                    </S.Title>
 
-                   
-                 
-                    </C.MidiasFhotos>
-                </C.MidiasFinish>
+                    <S.Description>
+                        <p>
+                            Email: StoreCell@gmail.com
+                        </p>
 
-            </C.Box1>
+                        <p>
+                            Telefone: (11) 9 70754259
+                        </p>
+                    </S.Description>
+                    <S.SubTitle>
+                        <h3>Redes Sociais:</h3>
+                        <div>
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-whatsapp"></i>
+                            <i class="bi bi-instagram"></i>
+                        </div>
+                    </S.SubTitle>
 
-            <C.Box2>
-                <C.LogoImg src="./img/Store-cell.png" alt="logoStoreCell"/>
-            </C.Box2>
+                </S.Contacts>
 
-        </C.Container>
+                <S.Safety>
+                    <S.Title>
+                        <h2>Site Seguro</h2>
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </S.Title>
+
+                    <div>
+                        <img src="./img/ImgFooter.img/siteSeguro.png" alt="Site Seguro" />
+                    </div>
+
+                    <S.SubTitle>
+                        <h5>@StoreCell.Todos os Diretos Resevados</h5>
+                    </S.SubTitle>
+                </S.Safety>
+
+                <S.Terms>
+                    <S.Title>
+                        <h2>Termos</h2>
+                        <i class="bi bi-receipt"></i>
+                    </S.Title>
+
+                    <S.Description>
+                        <p>
+                            Politica de Privacidade
+                        </p>
+
+                        <p>
+                            Termos de Uso
+                        </p>
+                    </S.Description>
+                    <S.SubTitle>
+                        <h3>Cartões:</h3>
+                        <div>
+                            <img src="./img/ImgFooter.img/cartoesDeCredito.jpg" alt="Cartões de Creditos" />
+                        </div>
+                    </S.SubTitle>
+                </S.Terms>
+
+            </S.Container>
+        </S.Footer>
 
     )
 }
