@@ -207,12 +207,12 @@ export const ButtonContinuar = styled.div`
         }
 
         @media (max-width: 800px) {
-            width: 30%;
+            width: 150%;
             font-size: 29px;
             margin-bottom: 10px;
         }
         @media (max-width: 600px) {
-            width: 50%;
+            width: 120%;
             font-size: 27px;
         }
 `;
