@@ -8,20 +8,28 @@ export const Container = styled.div`
     /* Foi assim que consegui acessar as setas do slider */
     div {
         display: flex;
+        width: 100%;
         justify-content: space-around;
         button {
             width: 100px;
+            border: 1px solid red;
             &.slick-prev {
-                z-index: 1;
                 left: -40px !important;
+                z-index: 1;
+                width: 30px !important;
+                margin-left: 40px;
                 &.slick-prev::before {
+                    font-size: 25px;
                     color: ${(props) => props.theme.colors.darkBlack}
                 }
             }
             &.slick-next {
-                z-index: 1;
+                z-index: 1px;
                 right: -40px !important;
+                width: 30px !important;
+                margin-right: 40px;
                 &.slick-next::before {
+                    font-size: 25px;
                     color: ${(props) => props.theme.colors.darkBlack}
                 }
             }

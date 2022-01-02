@@ -10,7 +10,7 @@ export const Container = styled.div`
     margin-top: 5px;
 
     /* Foi assim que consegui acessar as setas do slider */
-    div {
+    div{
         button {
             &.slick-prev {
                 left: 10px !important;
