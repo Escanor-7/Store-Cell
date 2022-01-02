@@ -16,7 +16,7 @@ const RoutesComponent = () => {
     return (
         <ThemeProvider theme={theme}>
             <BrowserRouter>
-                {/* <Header />/ */}
+                <Header />/
                 <Routes>
                     <Route path='/home' element={<Home />} />
                     // <Route path='/login' element={<Login />} />
