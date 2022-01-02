@@ -12,7 +12,6 @@ export const Container = styled.div`
         justify-content: space-around;
         button {
             width: 100px;
-            border: 1px solid red;
             &.slick-prev {
                 left: -40px !important;
                 z-index: 1;
