@@ -142,6 +142,7 @@ div{
 h3{
     color: ${(props) => props.theme.colors.whiteGlobal};
     font-weight: ${(props) => props.theme.weight.fontWeightBold};
+    font-size: 22px;
 
     @media (max-width: 650px) {
             font-size: 17px;
@@ -203,6 +204,7 @@ text-align: center;
 p{
     color: ${(props) => props.theme.colors.whiteGlobal};
     ${(props) => props.theme.weight.fontWeightBold};
+    font-size: 20px;
 
     @media (max-width: 650px) {
             font-size: 12px;
