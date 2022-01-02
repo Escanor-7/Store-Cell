@@ -92,11 +92,11 @@ export const ButtonCadastrar = styled.div`
         }
 
         @media (max-width: 800px) {
-            width: 30%;
+            width: 300px;
             font-size: 29px;
         }
         @media (max-width: 600px) {
-            width: 50%;
+            width: 180px;
             font-size: 27px;
         }
 `;
