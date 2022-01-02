@@ -32,7 +32,7 @@ export const Container = styled.div`
         }
 
         @media (max-width: 500px) {
-            width: 200px;
+            width: 300px;
             font-size: 29px;
             margin-top: 30px;
         }
