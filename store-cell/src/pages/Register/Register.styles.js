@@ -9,7 +9,7 @@ export const Container = styled.div`
     font-family: ${(props) =>props.theme.fontFamilies.sansSerif};
 `;
 
-export const Login = styled.div`
+export const Login = styled.form`
     display: flex;
     text-align: center;
     justify-content: flex-start;
@@ -17,6 +17,7 @@ export const Login = styled.div`
     width: 90%;
     height: 100%;
     background-color: ${(props) => props.theme.colors.whiteGlobal};
+    margin-bottom: 30px;
 
     h1{
         font-size: 50px;
@@ -29,22 +30,28 @@ export const InputContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     label {
         font-size: 20px;
         color: ${(props) => props.theme.colors.darkBlack};
-        margin: 0px 0px 10px 22px;
+        margin: 0px 0px 2px 22px;
+    }
+    span {
+        font-size: 14px;
+        color: ${(props) => props.theme.colors.Red};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
+        margin: 0px 0px 0px 22px;
     }
 
     div {
         display: flex;
-        width: 98%;
+        width: 100%;
 
         i{
             position: relative;
             width: 0px;
-            top: 15px;
+            top: 12px;
             left: 25px;
             font-size: 25px;
             margin-left: 10px;
@@ -56,12 +63,12 @@ export const InputContainer = styled.div`
             margin-left: 10px;
             margin-right: 10px;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             display: flex;
             align-items: center;
             background-color: ${(props) => props.theme.colors.whiteGlobal};
             border-radius: 5px;
-            height: 50px;
+            height: 45px;
             border: 1px solid ${(props) => props.theme.colors.darkBlack};
             padding-left: 50px;
 
