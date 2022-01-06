@@ -1,12 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as S from './Login.styles.js'
+import * as S from './Login.styles.js';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
 
+const validatioLogin = yup.object().shape({
+    email: yup.string().required('O campo email é obrigatorio').max(40, 'O email precisa ter menos de 40 caracteres'),
+    senha: yup.string().required('O campo senha é obrigatorio').max(8, 'A senha precisa ter menos de 8 caracteres')
+
+})
 
 const Login = () => {
+
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(validatioLogin)
+    })
+
+    const addLogin = data => console.log(data)
+
     return (
         <S.Container>
-            <S.Login>
+            <S.Login onSubmit={handleSubmit(addLogin)}>
                 <h1>Login</h1>
                 <S.InputContainer>
                     <label>Email</label>
@@ -14,9 +29,9 @@ const Login = () => {
                         <i class="bi bi-envelope"></i>
                         <input
                             type="email"
-                            placeholder="exemplo@exemplo.com.br"
-                        />
+                            placeholder="exemplo@exemplo.com.br" {...register("email")} />
                     </div>
+                    <span>{errors.email?.message}</span>
                 </S.InputContainer>
 
                 <S.InputContainer>
@@ -25,7 +40,7 @@ const Login = () => {
                         <i class="bi bi-shield-lock"></i>
                         <input
                             type={"password"}
-                            placeholder="Senha..." />
+                            placeholder="senha..." {...register("senha")} />
 
                         <S.PasswordEye>
                             <i class="bi bi-eye" />
@@ -35,6 +50,7 @@ const Login = () => {
                             <i class="bi bi-eye-slash"></i>
                         </S.PasswordEye>
                     </div>
+                    <span>{errors.senha?.message}</span>
                 </S.InputContainer>
 
                 <S.ButtonContainer>

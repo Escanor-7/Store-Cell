@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import theme from './designSystem/designSystem.js';
 import Header from './components/local/header/index.jsx';
@@ -10,9 +10,12 @@ import Home from "./pages/Home";
 import Checkout from './pages/Checkout/index'
 import Requests from "./pages/Requests/index.jsx";
 import Footer from './components/local/footer/index';
+
 // Este componente App é onde vamos importar as páginas e criar nossas rotas
 
 const RoutesComponent = () => {
+
+
     return (
         <ThemeProvider theme={theme}>
             <BrowserRouter>
