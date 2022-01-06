@@ -10,7 +10,7 @@ export const Container = styled.div`
     font-family: ${(props) =>props.theme.fontFamilies.sansSerif};
 `;
 
-export const Login = styled.div`
+export const Login = styled.form`
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -39,7 +39,7 @@ export const ButtonContainer = styled.div`
     }
 `;
 
-export const ButtonEntrar = styled.div`
+export const ButtonEntrar = styled.button`
         display: flex;
         align-items: center;
         justify-content: center;
@@ -111,6 +111,12 @@ export const InputContainer = styled.div`
     label {
         font-size: 20px;
         color: ${(props) => props.theme.colors.darkBlack};
+        margin: 0px 0px 10px 22px;
+    }
+    span {
+        font-size: 15px;
+        color: ${(props) => props.theme.colors.Red};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
         margin: 0px 0px 10px 22px;
     }
 
