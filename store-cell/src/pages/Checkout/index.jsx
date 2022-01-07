@@ -228,13 +228,13 @@ const Checkout = () => {
 
                 </S.ContainerPagamento>
 
-                {/* <Link to='/requests' style={{textDecoration: 'none'}}> */}
+                <Link to='/requests' style={{textDecoration: 'none'}}>
                     <S.ButtonFinalizar>
                         <button type="submit">
                             Finalizar
                         </button>
                     </S.ButtonFinalizar>
-                {/* </Link> */}
+                </Link>
 
 
             </S.ContainerDescriçoes>
