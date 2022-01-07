@@ -6,8 +6,10 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
 const validatioLogin = yup.object().shape({
-    email: yup.string().required('O campo email é obrigatorio').max(40, 'O email precisa ter menos de 40 caracteres'),
-    senha: yup.string().required('O campo senha é obrigatorio').max(8, 'A senha precisa ter menos de 8 caracteres')
+    email: yup.string().required('O campo email é obrigatorio')
+    .max(40, 'O email precisa ter menos de 40 caracteres'),
+    senha: yup.string().required('O campo senha é obrigatorio')
+    .max(8, 'A senha precisa ter menos de 8 caracteres')
 
 })
 

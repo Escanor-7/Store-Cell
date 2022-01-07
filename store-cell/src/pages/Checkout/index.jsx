@@ -1,6 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from './Checkout.styles.js';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
+const validatioCheckout = yup.object().shape({
+    nome: yup.string().required('O campo nome é obrigatorio')
+    .max(40, 'O nome precisa ter menos de 40 caracteres'),
+
+    cartao: yup.string().required('O campo cartao é obrigatorio')
+    .max(16, 'A cartao precisa ter menos de 16 caracteres'),
+
+    codigo: yup.string().required('O campo codigo é obrigatorio')
+    .max(3, 'A codigo precisa ter menos de 3 caracteres'),
+
+})
 
 const Checkout = () => {
     const [creditCardForm, setCreditCardForm] = useState(false);
@@ -16,13 +31,20 @@ const Checkout = () => {
         setBilletPrinting(true);
         setCreditCardForm(false);
     };
+
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(validatioCheckout)
+    })
+
+    const addCheckout = data => console.log(data)
+    
     return (
 
         <S.Container>
 
             <h1>Finalizar Compra</h1>
 
-            <S.ContainerDescriçoes>
+            <S.ContainerDescriçoes onSubmit={handleSubmit(addCheckout)}>
                 <h3>Revisão do Pedido</h3>
 
                 <S.RevisaoDoPedido>
@@ -97,9 +119,11 @@ const Checkout = () => {
                                     <div>
                                         <i class="bi bi-person"></i>
                                         <input
-                                            type="text"
-                                            placeholder="Ex: João Carlos" />
+                                            type="nome"
+                                            placeholder="Ex: João Carlos"
+                                            {...register("nome")} />
                                     </div>
+                                    <span>{errors.nome?.message}</span>
 
                                 </S.InputContainer>
 
@@ -109,9 +133,11 @@ const Checkout = () => {
                                     <div>
                                         <i class="bi bi-credit-card"></i>
                                         <input
-                                            type="numero"
-                                            placeholder="Ex: 000.000.000.000" />
+                                            type="cartao"
+                                            placeholder="Ex: 000.000.000.000"
+                                            {...register("cartao")} />
                                     </div>
+                                    <span>{errors.cartao?.message}</span>
 
                                 </S.InputContainer>
 
@@ -123,8 +149,10 @@ const Checkout = () => {
                                         <i class="bi bi-shield-lock"></i>
                                         <input
                                             type="codigo"
-                                            placeholder="Ex: 000" />
+                                            placeholder="Ex: 000"
+                                            {...register("codigo")} />
                                     </div>
+                                    <span>{errors.codigo?.message}</span>
 
                                 </S.InputContainer>
 
@@ -135,7 +163,7 @@ const Checkout = () => {
                                     <S.ContainerOption>
 
                                         <select>
-                                            <option selected value="#">Més</option>
+                                            <option selected value="#"{...register("mes")}>Més</option>
                                             <option value="#">01</option>
                                             <option value="#">02</option>
                                             <option value="#">03</option>
@@ -149,9 +177,10 @@ const Checkout = () => {
                                             <option value="#">11</option>
                                             <option value="#">12</option>
                                         </select>
+                                
 
                                         <select>
-                                            <option selected value="#">Ano</option>
+                                            <option selected value="#" {...register("ano")}>Ano</option>
                                             <option value="#">2022</option>
                                             <option value="#">2023</option>
                                             <option value="#">2024</option>
@@ -164,7 +193,10 @@ const Checkout = () => {
                                             <option value="#">2031</option>
                                             <option value="#">2032</option>
                                             <option value="#">2033</option>
+                                            
                                         </select>
+                                        
+                                        
 
                                     </S.ContainerOption>
 
@@ -198,7 +230,7 @@ const Checkout = () => {
 
                 <Link to='/requests' style={{textDecoration: 'none'}}>
                     <S.ButtonFinalizar>
-                        <button>
+                        <button type="submit">
                             Finalizar
                         </button>
                     </S.ButtonFinalizar>

@@ -15,7 +15,7 @@ export const Container = styled.div`
         font-weight: ${(props) => props.theme.weight.fontWeightBold};
     }
 `;
-export const ContainerDescriçoes = styled.div`
+export const ContainerDescriçoes = styled.form`
     display: flex;
     width: 90%;
     height: 100%;
@@ -183,12 +183,18 @@ export const InputContainer = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    margin-bottom: 10px;
 
     label {
         font-size: 20px;
         color: ${(props) => props.theme.colors.darkBlack};
-        margin: 0px 0px 10px 20px ;
+        margin: 0px 0px 2px 22px;
+    }
+
+    span {
+        font-size: 15px;
+        color: ${(props) => props.theme.colors.Red};
+        font-weight: ${(props) => props.theme.weight.fontWeightBold};
+        margin: 0px 0px 10px 22px;
     }
 
     div {
@@ -211,12 +217,12 @@ export const InputContainer = styled.div`
             margin-left: 10px;
             margin-right: 10px;
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             display: flex;
             align-items: center;
             background-color: ${(props) => props.theme.colors.whiteGlobal};
             border-radius: 5px;
-            height: 50px;
+            height: 45px;
             border: 1px solid ${(props) => props.theme.colors.darkBlack};
             padding-left: 50px;
 
@@ -234,7 +240,7 @@ export const ContainerOption = styled.div`
     
         select{
             width: 200px;
-            height: 50px;
+            height: 45px;
             margin-inline: 20px;
             border-radius: 10px;
         }
@@ -263,7 +269,7 @@ export const Cartao = styled.div`
         }
 `;
 export const Boleto = styled.div`
-        margin-bottom: 20px;
+        margin-bottom: 0px;
 
         label{
         color: ${(props) => props.theme.colors.darkBlack};
